@@ -1,0 +1,112 @@
+﻿main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h3 {
+        margin: 0 0 0 24px;
+        padding: 0;
+
+        font-family: $supreme;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.004em;
+        text-align: left;
+
+        color: $lightGreyMain;
+    }
+    & .table {
+        margin: 40px 23px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 10px 50px rgba(15, 42, 116, 0.08);
+        border-radius: 8px;
+        &__row {
+            border-bottom: 2px solid $lightBG3;
+
+            display: grid;
+            grid-template-areas: 
+            "_value ."
+            "_age _status"
+            "_hash _hash";
+            grid-template-columns: 2fr 1fr;
+
+            margin: 0;
+            padding: 22px 28px 21px 28px;
+
+            font-family: $supreme;
+            font-size: 14px;
+            font-style: normal;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            color: $lightGreyMain;
+
+            &:last-child {
+                border: none;
+            }
+            & p {
+                margin: 0 0 10px 0;
+                padding: 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            & .value {
+                grid-area: _value;
+
+                font-weight: 700;
+                
+                & span {
+                    font-weight: 400;
+
+                    color: $lightBlue5;
+                }
+            }
+            & .age {
+                grid-area: _age;
+
+                font-weight: 400;
+            }
+            & .status {
+                grid-area: _status;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                font-weight: 400;
+                & img {
+                    margin: 0 8px 0 0;
+                    padding: 0;
+                }
+            }
+            & .hash {
+                grid-area: _hash;
+
+                display: flex;
+
+                font-weight: 400;
+
+                color: $lightGrey5;
+                & span {
+                    margin: 0 0 0 4px;
+                    color: $lightBlue5;
+                }
+            }
+        }
+        &__link {
+            & a {
+                text-decoration: none;
+                color: $lightPink3;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
