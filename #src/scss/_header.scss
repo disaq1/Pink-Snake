@@ -1,79 +1,203 @@
 ﻿header {
     margin: 0;
     padding: 0;
+
     .header {
         grid-area: _header;
 
         margin: 0;
         padding: 14px 22px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-areas: 
+        "_logo _burger";
         align-items: center;
-        & .burger {
+        justify-content: space-between;
+        & .logo {
+            grid-area: _logo;
+        }
+        & .burger_btn {
+            grid-area: _burger;
+
+            cursor: pointer;
+
             width: 20px;
-            height: 2px;
-            background: $lightPink3;
-            border-radius: 5px;
+            height: 20px;
+
             position: relative;
-    
-            &::before {
+            &__span {
                 position: absolute;
                 content: '';
-                top: -5px;
+                top: 8px;
                 left: 0;
                 width: 20px;
                 height: 2px;
                 background: $lightPink3;
+                border-radius: 5px;
+                opacity: 1;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                top: 16px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                background: $lightPink3;
+                border-radius: 5px;
             }
             &::after {
                 position: absolute;
                 content: '';
-                top: 5px;
+                top: 0px;
                 left: 0;
                 width: 20px;
                 height: 2px;
                 background: $lightPink3;
+                border-radius: 5px;
             }
-
-            @media screen and (min-width:768px) {
+            @media screen and (min-width:1024px) {
                 display: none;
             }
         }
         & .nav {
-            & ul {
+            grid-area: _nav;
+            &__list {
+                margin: 0;
+                padding: 0;
+
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 & li {
                     list-style: none;
+                    cursor: pointer;
 
                     margin: 0 25px 0 0;
+                    & a {
+                        font-family: $supreme;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: center;
 
+                        color: $lightGrey5;
+                        text-decoration: none;
+                        &:hover {
+                            color: $lightPink5;
+                        }
+                    }
+                    & .activeLink {
+                        color: $lightPink5;
+                        font-weight: 700;
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+                
+                @media screen and (max-width:1023px) {
+                    display: none;
+                }
+            }
+            &__more {
+                margin: 0 !important;
+                position: relative;
+                &--list {
+                    opacity: 0;
+                    transform: translateY(-250%);
+
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 39px;
+                    left: -20px;
+                    padding: 16px 34px 16px 20px;
+
+                    background: $trueWhite;
+                    box-shadow: 0px 4px 16px rgba(15, 42, 116, 0.14);
+                    border-radius: 4px;
+
+                    & li {
+                        width: max-content;
+                        margin: 0 0 16px 0;
+                        padding: 0;
+
+                    }
+                }
+                @media screen and (min-width:1204px) {
+                    display: none;
+                }
+            }
+            &__hidden {
+                display: none;
+                @media screen and (min-width:1204px) {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:1023px) {
+                display: none;
+            }
+        }
+        & .search {
+            grid-area: _search;
+            display: block;
+            width: 100%;
+
+            position: relative;
+            & input {
+                width: 100%;
+                margin: 0;
+                padding: 12px 24px 12px 16px; //12 52 12 16
+
+                background: $trueWhite;
+                border: 2px solid $lightPink1;
+                box-sizing: border-box;
+                border-radius: 4px;
+
+                &::placeholder {
+                    margin: 0;
+                    padding: 0;
                     font-family: $supreme;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0em;
-                    text-align: center;
+                    text-align: left;
 
-                    color: $lightGrey5;
-                    &:last-child {
-                        margin: 0;
-                    }
-                    &:hover {
-                        color: $lightPink5;
-                    }
+                    color: $lightGrey3;
                 }
-                & .active {
-                    color: $lightPink5;
-                    font-weight: 700;
-                }
+            }
+            &::after {
+                position: absolute;
+                content: url(../img/loop.svg);
+                top: 50%;
+                right: 16px;
+                transform: translateY(-50%);
             }
 
             @media screen and (max-width:767px) {
                 display: none;
             }
+        }
+
+        @media screen and (min-width:768px) {
+            padding: 24px 32px;
+            grid-template-areas: 
+            "_logo _search _burger";
+            grid-template-columns: 152px 1fr 24px;
+            grid-gap: 32px;
+        }
+        @media screen and (min-width:1024px) {
+            grid-template-areas: 
+            "_logo _nav _search";
+            grid-template-columns: 152px 315px 348px;
+        }
+        @media screen and (min-width:1204px) {
+            grid-template-columns: 152px 530px 348px;
         }
     }
     & .main {
@@ -81,6 +205,11 @@
 
         padding: 48px 23px 16px 25px;
         & h1 {
+            grid-area: _h1;
+
+            margin: 0 0 28px 0;
+            padding: 0;
+
             font-family: $supreme;
             font-size: 36px;
             font-style: normal;
@@ -94,48 +223,84 @@
             & span {
                 color: $lightPink5;
             }
-        }
-        & .description__wrapper {
 
-            & .description {
-                margin: 0 0 20px 0;
-                padding: 0 10px 0 0;
-    
-                display: flex;
-                align-items: flex-start;
-                & img {
-                    margin: 0 12px 0 0;
-                }
-                & p {
-                    margin: 0;
-                    padding: 0;
-    
-                    font-family: $supreme;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: left;
-    
-                    color: $lightGreyMain;
-                }
-                &:last-child {
-                    margin: 0;
-                }
+            @media screen and (min-width:768px) {
+                font-size: 50px;
+                font-weight: 400;
+                line-height: 56px;
+                letter-spacing: -0.01em;
+            }
+            @media screen and (min-width:1204px) {
+                font-size: 62px;
+                line-height: 68px;
+                letter-spacing: -0.012em;
+
+                max-width: 523px;
+            }
+        }
+        & .description {
+            margin: 0 0 20px 0;
+            padding: 0 10px 0 0;
+
+            display: flex;
+            align-items: flex-start;
+            & img {
+                margin: 0 12px 0 0;
+            }
+            & p {
+                margin: 0;
+                padding: 0;
+
+                font-family: $supreme;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                color: $lightGreyMain;
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &__first {
+                grid-area: _d1;
+            }
+            &__second {
+                grid-area: _d2;
+            }
+
+            @media screen and (min-width:768px) {
+                // margin: 0 0 27px 0; //Типо по макету так...
+                padding: 0;
+                min-width: 360px;
+            }
+            @media screen and (min-width:1204px) {
+                min-width: min-content;
+                max-width: 234px;
             }
         }
 
         @media screen and (min-width:768px) {
-            display: flex;
-            justify-content: space-between;
+            padding: 60px 32px;
+            display: grid;
+            grid-template-areas: 
+            "_h1 _d1"
+            "_h1 _d2";
+            align-items: flex-start;
+            grid-gap: 0 76px;
+        }
+        @media screen and (min-width:1204px) {
+            display: grid;
+            grid-template-areas: 
+            "_h1 _d1 _d2";
+            grid-gap: 0;
         }
     }
     & .footer {
-        grid-area: _footer;
-
         margin: 0;
-        padding: 0 23px 0 24px;
+        padding: 0 23px 40px 24px;
 
         .search {
             position: relative;
@@ -171,12 +336,21 @@
                 transform: translateY(-50%);
             }
         }
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
     }
     @media screen and (min-width:768px) {
         display: grid;
         grid-template-areas: 
-        "_header _footer"
-        "_main _main";
+        "_header"
+        "_main";
         align-items: center;
     }
+}
+
+.-opened {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }
