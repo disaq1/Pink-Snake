@@ -579,9 +579,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 main h3 {
@@ -603,6 +603,42 @@ main .table {
   -webkit-box-shadow: 0px 10px 50px rgba(15, 42, 116, 0.08);
           box-shadow: 0px 10px 50px rgba(15, 42, 116, 0.08);
   border-radius: 8px;
+}
+
+main .table__header {
+  display: grid;
+  grid-template-areas: "_hash _status _age _from _to _value";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 28px;
+  background: #EDF3FF;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+main .table__header span:nth-child(1) {
+  grid-area: _hash;
+}
+
+main .table__header span:nth-child(2) {
+  grid-area: _status;
+}
+
+main .table__header span:nth-child(3) {
+  grid-area: _age;
+}
+
+main .table__header span:nth-child(4) {
+  grid-area: _from;
+}
+
+main .table__header span:nth-child(5) {
+  grid-area: _to;
+}
+
+main .table__header span:nth-child(6) {
+  grid-area: _value;
 }
 
 main .table__row {
@@ -680,6 +716,10 @@ main .table__row .hash {
 main .table__row .hash span {
   margin: 0 0 0 4px;
   color: #3162C4;
+}
+
+main .table__link {
+  margin: 0 auto;
 }
 
 main .table__link a {
@@ -862,6 +902,10 @@ main .table__link a {
         -ms-flex-align: center;
             align-items: center;
   }
+
+  main .table {
+    margin: 20px 32px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -925,6 +969,10 @@ main .table__link a {
 
 @media screen and (max-width: 767px) {
   header .header .search {
+    display: none;
+  }
+
+  main .table__header {
     display: none;
   }
 }
