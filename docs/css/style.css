@@ -1029,6 +1029,14 @@ main .table__link--hidden {
   display: block !important;
 }
 
+.img-svg-blue path {
+  stroke: #3162C4 !important;
+}
+
+.img-svg-blue path:hover {
+  stroke: #1F4495 !important;
+}
+
 #footer {
   width: 100%;
   border-top: 2px solid #EDF3FF;
