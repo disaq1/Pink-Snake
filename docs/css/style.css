@@ -2243,8 +2243,36 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   margin: 0 4px;
 }
 
+.hexagon {
+  position: relative;
+  width: 24px;
+  height: 19px !important;
+  color: #E3358E !important;
+  font-weight: 700;
+  background-color: #FEE7F3;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 7.51px solid #FEE7F3;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 7.51px solid #FEE7F3;
+}
+
 .pagination {
-  padding: 13px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2255,9 +2283,13 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
       -ms-flex-pack: center;
           justify-content: center;
   border-top: 2px solid #EDF3FF;
+  padding: 13px 0;
 }
 
-.pagination a {
+.pagination__link {
+  cursor: pointer;
+  width: 24px;
+  height: 26px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2267,6 +2299,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 5px;
   text-decoration: none;
   color: #505766;
   font-family: "supreme", sans-serif;
@@ -2276,46 +2309,18 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
-  margin: 0 10px;
 }
 
-.pagination a:hover {
+.pagination__link:hover {
   color: #E3358E;
 }
 
-.pagination a:last-child {
-  margin: 0;
+.img-svg-grey path {
+  stroke: #828A99 !important;
 }
 
-.pagination .hexagon {
-  position: relative;
-  width: 26px;
-  height: 19px;
-  color: #E3358E;
-  font-weight: 700;
-  background-color: #FEE7F3;
-  margin: 0 2px !important;
-  padding: 0 7px;
-}
-
-.pagination .hexagon:before,
-.pagination .hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-}
-
-.pagination .hexagon:before {
-  bottom: 100%;
-  border-bottom: 7.51px solid #FEE7F3;
-}
-
-.pagination .hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 7.51px solid #FEE7F3;
+.img-svg-link-grey:hover .img-svg-grey path {
+  stroke: #E3358E !important;
 }
 
 .tabs_triggers__item--active {
@@ -2898,10 +2903,6 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   .breadCrumbs {
-    display: none;
-  }
-
-  .pagination {
     display: none;
   }
 }

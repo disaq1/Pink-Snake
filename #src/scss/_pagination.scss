@@ -1,16 +1,91 @@
-﻿.pagination {
-  padding: 13px 0;
+﻿//.pagination {
+//  padding: 13px 0;
+//
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//  border-top: 2px solid $lightBG3;
+//
+//  & a {
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//
+//    text-decoration: none;
+//    color: $lightGrey7;
+//
+//    font-family: $supreme;
+//    font-size: 14px;
+//    font-style: normal;
+//    font-weight: 400;
+//    line-height: 20px;
+//    letter-spacing: 0em;
+//    text-align: left;
+//
+//    margin: 0 10px;
+//
+//    &:hover {
+//      color: $lightPink5;
+//    }
+//
+//    &:last-child {
+//      margin: 0;
+//    }
+//  }
+//
+//}
 
+
+.hexagon {
+  position: relative;
+  width: 24px;
+  height: 19px !important;
+  color: $lightPink5 !important;
+  font-weight: 700;
+  background-color: $lightPink1;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 7.51px solid $lightPink1;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 7.51px solid $lightPink1;
+}
+//
+//@media screen and (max-width: 767px) {
+//  display: none;
+//}
+
+.pagination {
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-top: 2px solid $lightBG3;
+  padding: 13px 0;
 
-  & a {
+  &__link {
+    cursor: pointer;
+
+    width: 24px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 5px;
 
     text-decoration: none;
     color: $lightGrey7;
@@ -23,49 +98,16 @@
     letter-spacing: 0em;
     text-align: left;
 
-    margin: 0 10px;
-
     &:hover {
       color: $lightPink5;
     }
-    &:last-child {
-      margin: 0;
-    }
   }
+}
 
-  & .hexagon {
-    position: relative;
-    width: 26px;
-    height: 19px;
-    color: $lightPink5;
-    font-weight: 700;
-    background-color: $lightPink1;
+.img-svg-grey path {
+  stroke: $lightGrey5 !important;
+}
 
-    margin: 0 2px !important;
-    padding: 0 7px;
-  }
-
-  .hexagon:before,
-  .hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
-  }
-
-  .hexagon:before {
-    bottom: 100%;
-    border-bottom: 7.51px solid $lightPink1;
-  }
-
-  .hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 7.51px solid $lightPink1;
-  }
-
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+.img-svg-link-grey:hover .img-svg-grey path{
+  stroke: $lightPink5 !important;
 }
