@@ -1,0 +1,35 @@
+﻿.breadCrumbs {
+    display: flex;
+    margin: 0 0 20px 32px;
+
+    font-family: $supreme;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: $lightGrey3;
+    & a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        color: $lightPink3;
+
+        &  img {
+            margin: 0 7px 0 0;
+        }
+        &:hover {
+            color: $lightPink5;
+        }
+    }
+    & span {
+        margin: 0 4px;
+    }
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}

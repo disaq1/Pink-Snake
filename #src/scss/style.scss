@@ -3,7 +3,36 @@
 @import "fonts.scss";
 @import "scaffolding.scss";
 
+//ОБЩИЕ СТИЛИ
+//Стили для тела страницы
 @import "_body";
+//Стили для шапки страницы
 @import "_header";
+//Стили для контентной части страницы
 @import "_main";
+//Стили для подвала сайта
+@import "_footer";
+
+//СТИЛИ ДЛЯ ОТДЕЛЬНЫХ СТРАНИЦ
+//Стили для контентной части страницы Transactions
+@import "_transactionsPage";
+//Стили для контентной части страницы Transaction
+@import "_transactionPage";
+//Стили для страницы с ошибкой Empty Result
+@import "_emptyResult";
+//Стили для страницы Tokens
+@import "_Tokens";
+//Стили для страницы Token
+@import "_Token";
+//Стили для странинцы Address
+@import "_AddressPage";
+
+//СТИЛИ ДЛЯ ОТДЕЛЬНЫХ ЭЛЕМЕНТОВ
+//Стили для бургер-меню в шапке страницы
 @import "_burger";
+//Стили для "хлебных крошек"
+@import "_breadCrumbs";
+//Стили для элемента "пагинация"
+@import "_pagination";
+//Стили для табов
+@import "_tabs";

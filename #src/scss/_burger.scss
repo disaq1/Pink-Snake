@@ -1,109 +1,112 @@
 ﻿.btnToggle {
-
-    .burger_btn__span {
-        opacity: 0 !important;
-    }
-    &::before {
-        width: 28.28px !important;
-        transform: rotate(-45deg) translateY(-50%);
-        top: 50% !important;
-        left: -4px !important;
-    }
-    &::after {
-        width: 28.28px !important;
-        transform: rotate(45deg) translateY(-50%);
-        top: 50% !important;
-        left: -4px !important;
-    }
+  .burger_btn__span {
+    opacity: 0 !important;
+  }
+  &::before {
+    width: 28.28px !important;
+    transform: rotate(-45deg) translateY(-50%);
+    top: 50% !important;
+    left: -4px !important;
+  }
+  &::after {
+    width: 28.28px !important;
+    transform: rotate(45deg) translateY(-50%);
+    top: 50% !important;
+    left: -4px !important;
+  }
 }
 
 .burger_menu__wrapper--open {
-    opacity: 1 !important;
-    transform: translateY(2px) !important;
+  opacity: 1 !important;
+  transform: translateY(2px) !important;
 }
 
 .burger_menu {
-    &__wrapper {
-        overflow: auto;
+  &__wrapper {
+    overflow: auto;
 
-        position: fixed;
-        top: 76px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba($color: $lightGreyMain, $alpha: .8);
-        
-        z-index: 2;
-        opacity: 0;
-        transform: translateY(-200%);
+    position: fixed;
+    top: 73px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: $lightGreyMain, $alpha: .8);
 
-        @media screen and (min-width:1024px) {
-            display: none !important;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(-200%);
+
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-200%);
+
+    @media screen and (min-width: 1024px) {
+      display: none !important;
+    }
+  }
+  &__content {
+    background: radial-gradient(61.52% 66.87% at 50% 0%, #F1F5FD 0%, #FFFFFF 100%);
+    padding: 54px 0 68px 0; //56 0 68 0
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__nav {
+    & ul {
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      & li {
+        list-style: none;
+        cursor: pointer;
+
+        margin: 0 0 36px 0;
+
+        font-family: $supreme;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+
+        color: $lightGrey5;
+        & a {
+          font-family: $supreme;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: center;
+
+          color: $lightGrey7;
+          text-decoration: none;
+          &:hover {
+            color: $lightPink5;
+          }
         }
-    }
-    &__content {
-        background: $trueWhite;
-        padding: 54px 0 68px 0; //56 0 68 0
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    &__nav {
-        & ul {
-            margin: 0;
-            padding: 0;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            & li {
-                list-style: none;
-                cursor: pointer;
-
-                margin: 0 0 36px 0;
-
-                font-family: $supreme;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0em;
-                text-align: center;
-
-                color: $lightGrey5;
-                & a {
-                    font-family: $supreme;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: center;
-
-                    color: $lightGrey7;
-                    text-decoration: none;
-                    &:hover {
-                        color: $lightPink5;
-                    }
-                }
-                & .activeLink {
-                    color: $lightPink5;
-                    font-weight: 700;
-                }
-                &:last-child {
-                    margin: 0;
-                }
-                &:hover {
-                    color: $lightPink5;
-                }
-            }
-            & .active {
-                color: $lightPink5;
-                font-weight: 700;
-            }
+        & .activeLink {
+          color: $lightPink5;
+          font-weight: 700;
         }
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          color: $lightPink5;
+        }
+      }
+      & .active {
+        color: $lightPink5;
+        font-weight: 700;
+      }
     }
+  }
 }

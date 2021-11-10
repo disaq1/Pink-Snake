@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Pink Snake</title>
+</head>
+
+<body>
+    <header class="header-gradient">
+    <div class="burger_menu__wrapper" id="burger_menu__wrapper">
+        <div class="burger_menu__content">
+            <nav class="burger_menu__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Transactions.html">Transactions</a></li>
+                    <li><a href="Tokens.html" class="activeLink">Tokens</a></li>
+                    <li><a href="#">PS Index Token</a></li>
+                    <li><a href="#">Nodes & Agents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logoPinkSnake.svg" alt="logoPinkSnake"></a>
+        </div>
+        <div class="burger_btn" id="burger" onclick="toggleBurger()">
+            <span class="burger_btn__span"></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Transactions.html">Transactions</a></li>
+                <li><a href="Tokens.html" class="activeLink">Tokens</a></li>
+                <li class="nav__more">
+                    <a class="nav__more--link" href="#">More •••</a>
+                    <ul class="nav__more--list">
+                        <div class="nav__more--list-wrapper">
+                            <li><a href="#">PS Index Token</a></li>
+                            <li><a href="#">Nodes & Agents</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav__hidden"><a href="#">PS Index Token</a></li>
+                <li class="nav__hidden"><a href="#">Nodes & Agents</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input type="search" class="searchInput" placeholder="Search by Address, Transaction Hash">
+            <img src="img/loop.svg" alt="" class="searchImg">
+            <img src="img/search_clear.svg" alt="search clear" class="search_clear">
+        </div>
+
+    </header>
+</header>
+    <main>
+        <div class="table__name table__name--dffd">
+            <h3>Tokens</h3>
+
+        </div>
+        <section class="table">
+
+            <div class="table__header table__header--tokens">
+                <span>Token name</span>
+                <span>Emission</span>
+                <span>transactions</span>
+                <span>Owner</span>
+                <span>Site</span>
+            </div>
+
+            <div class="table__row table__row--tokens">
+                <div class="name">
+                    <span>
+                        Name
+                    </span>
+                    <p>
+                        <a href="Token.html">
+                            ADADAD
+                        </a>
+                    </p>
+                </div>
+                <div class="emission">
+                    <span>
+                        Emission
+                    </span>
+                    <p>
+                        1 000 000
+                    </p>
+                </div>
+                <div class="transactions">
+                    <span>
+                        Transactions
+                    </span>
+                    <p>123 000 000</p>
+                </div>
+                <div class="owner">
+                    <span>
+                        Owner
+                    </span>
+                    <p>
+                        <a href="#">
+                            0x4e80744fa23cec76e...
+                        </a>
+                    </p>
+                </div>
+                <div class="site">
+                    <span>
+                        Site
+                    </span>
+                    <p>
+                        <a href="#">
+                            www.tethertoken.com
+                        </a>
+                        <a href="_black" class="download">
+                            <img src="img/downloadArrow.svg" alt="downloadArrow">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a class="pagination__link" href="#"><img src="img/arrow__Prev.svg" alt="arrow__Prev"></a>
+                <a class="pagination__link hexagon" href="#">1</a>
+                <a class="pagination__link" href="#">2</a>
+                <a class="pagination__link" href="#">3</a>
+                <a class="pagination__link" href="#">4</a>
+                <a class="pagination__link" href="#">5</a>
+                <a class="pagination__link" href="#">...</a>
+                <a class="pagination__link" href="#">1051</a>
+                <a class="pagination__link" href="#"><img src="img/arrow__Next.svg" alt="arrow__Next"></a>
+            </div>
+
+        </section>
+    </main>
+    <footer id="footer">
+        <section>
+            <img class="footerLogo" src="img/logoPinkSnake--footer.svg" alt="footer logo">
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Transactions.html">Transactions</a></li>
+                    <li><a href="Tokens.html">Tokens</a></li>
+                    <li><a href="#">PS Index Token</a></li>
+                    <li><a href="#">Nodes & Agents</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="learnMoreLink">
+                Learn more about Pink Snake <img src="img/downloadArrow.svg" alt="downloadArrow">
+            </a>
+            <div class="toTop">
+                <a href="#header" class="img-svg-link">
+                    <img src="img/arrow_top.svg" alt="arrow_top" class="img-svg">
+                </a>
+                <p>
+                    back
+                    <br>
+                    to top
+                </p>
+            </div>
+        </section>
+    </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/headerSearch.js"></script>
+    <!-- Подключение jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Подключение img convertor-->
+    <script src="js/imgConvertor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+﻿#footer {
+  width: 100%;
+  border-top:  2px solid $lightBG3;
+}
+
+footer {
+
+    & section {
+        max-width: 1204px;
+        margin: 0 auto;
+        padding: 28px 24px;
+
+
+        display: grid;
+        grid-template-areas:
+        "_logo _toTop"
+        "_link _toTop";
+
+        & picture {
+            grid-area: _logo;
+
+            height: 14px;
+        }
+        @media screen and (min-width:768px) {
+            padding: 27px 32px;
+            grid-template-areas:
+            ". _nav "
+            "_logo _link";
+            grid-template-columns: 100px 1fr;
+            grid-gap: 0 70px;
+            align-items: center;
+        }
+        @media screen and (min-width:1024px) {
+            padding: 45px 32px;
+            grid-template-areas:
+            "_logo _nav _link";
+            grid-gap: 0;
+            align-items: center;
+            justify-items: flex-end;
+        }
+        & .footerLogo {
+            margin: 0 0 20px 0;
+            @media screen and (min-width:768px) {
+                margin: 0;
+            }
+        }
+        & .footer__nav {
+            grid-area: _nav;
+
+            & ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & li {
+                    list-style: none;
+                    cursor: pointer;
+
+                    margin: 0 25px 0 0;
+                    & a {
+                        font-family: $supreme;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: center;
+
+                        color: $lightGrey5;
+                        text-decoration: none;
+                        &:hover {
+                            color: $lightPink5;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            @media screen and (max-width:767px) {
+                display: none;
+            }
+            @media screen and (min-width:1024px) {
+                margin: 0 24px 0 0;
+                max-width: 530px;
+            }
+        }
+        & .learnMoreLink {
+            grid-area: _link;
+            font-family: $supreme, sans-serif;
+            text-decoration: none;
+            color: $lightBlue5;
+
+            display: flex;
+            align-items: center;
+            & img {
+                width: 16px;
+                height: 16px;
+                margin: 0 0 0 7px;
+
+                @media screen and (min-width:768px) {
+                    margin: 0;
+                }
+            }
+            & picture {
+                width: 16px;
+                height: 16px;
+            }
+            &:hover {
+                color: $lightBlue7;
+            }
+
+            @media screen and (min-width:768px) {
+                margin: 12px 0 0 0;
+                justify-content: flex-end;
+            }
+            @media screen and (min-width:1024px) {
+                margin: 0;
+                padding: 0 0 0 24px;
+                border-left:  2px solid $lightBG3;
+            }
+        }
+        & .toTop {
+            grid-area: _toTop;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            & a {
+                width: 28px;
+                height: 28px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: $trueWhite;
+                box-shadow: 0px 4px 16px rgba(15, 42, 116, 0.14);
+                border-radius: 4px;
+                & img,
+                & picture {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            & p {
+                margin: 7px 0 0 0;
+                padding: 0;
+
+                font-family: $supreme;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 13px;
+                letter-spacing: 0.015em;
+                text-align: right;
+                text-transform: uppercase;
+
+                color: $lightPink3;
+            }
+
+            @media screen and (min-width:768px) {
+                display: none;
+            }
+        }
+    }
+}

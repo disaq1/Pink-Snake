@@ -2,9 +2,27 @@
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-
-    max-width: 1204px;
 }
 body._lock {
     overflow: hidden;
+}
+
+.img-svg-link {
+  display: flex;
+  align-items: center;
+  color: $lightGrey3;
+  &:hover .img-svg path {
+    stroke: $lightPink5;
+  }
+}
+
+.img-svg path {
+  stroke: $lightPink3;
+  &:hover {
+    stroke: $lightPink5;
+  }
+}
+
+.img-svg_active path {
+  stroke: $lightPink5;
 }

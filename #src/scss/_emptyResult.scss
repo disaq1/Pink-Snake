@@ -1,0 +1,89 @@
+﻿.emptyResult {
+
+    margin: 0 23px 280px 25px;
+    font-family: $supreme;
+    font-style: normal;
+    text-align: left;
+
+    & h1 {
+        margin: 0 0 12px 0;
+
+        letter-spacing: -0.004em;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 32px;
+
+        color: $lightGreyMain;
+    }
+    & p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+
+        color: $lightGrey7;
+        & span {
+            border-bottom: 2px solid $lightPink1;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+
+            color: $lightGreyMain;
+        }
+    }
+    & h2 {
+        margin: 24px 0 12px 0;
+
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.004em;
+
+        color: $lightGreyMain;
+    }
+
+    .search {
+      max-width: 640px;
+    }
+
+    & .sure {
+        margin: 16px 0 0;
+        font-family: $supreme;
+        font-style: normal;
+        text-align: left;
+
+        color: $lightGrey7;
+        & h5 {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.015em;
+        }
+        & p {
+            margin: 7px 0 0;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0em;
+            & span {
+                font-weight: 700;
+                color: $lightGrey7;
+                border: none;
+            }
+            @media screen and (min-width:768px) {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        margin: 0 32px 180px;
+    }
+}

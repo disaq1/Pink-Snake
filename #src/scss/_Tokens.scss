@@ -1,0 +1,90 @@
+﻿.table {
+  &__header {
+    &--tokens {
+      & span:nth-child(1) {
+        grid-area: _name;
+      }
+      & span:nth-child(2) {
+        grid-area: _emission;
+        text-align: right;
+      }
+      & span:nth-child(3) {
+        grid-area: _transactions;
+        text-align: right;
+      }
+      & span:nth-child(4) {
+        grid-area: _owner;
+      }
+      & span:nth-child(5) {
+        grid-area: _site;
+      }
+      grid-template-areas: "_name _emission _transactions . _owner . _site";
+      grid-template-columns:
+        82px minmax(114px, 178px) minmax(141px, 205px) minmax(56px, 112px)
+        minmax(88px, 145px) minmax(38px, 90px) minmax(129px, 283px);
+    }
+  }
+  &__row {
+    &--tokens {
+      grid-template-areas:
+        "_name"
+        "_emission"
+        "_transactions"
+        "_owner"
+        "_site";
+      & div {
+        display: grid;
+        grid-template-columns: 1fr minmax(147px, 1fr);
+        grid-template-areas: "_span _p";
+        @media screen and (min-width: 768px) {
+          grid-template-areas: "_p";
+          grid-template-columns: 1fr;
+        }
+        & span {
+          grid-area: _span;
+
+          font-family: $supreme;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0.015em;
+          text-align: left;
+          text-transform: uppercase;
+
+          color: $lightGrey5;
+
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+        & p {
+          grid-area: _p;
+          margin: 0;
+          padding: 0;
+
+          font-family: $supreme;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: left;
+
+          color: $lightGreyMain;
+          & a {
+            color: $lightBlue5;
+            text-decoration: none;
+          }
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-areas: "_name _emission _transactions . _owner . _site";
+        grid-template-columns:
+          82px minmax(114px, 178px) minmax(141px, 205px) minmax(56px, 112px)
+          minmax(88px, 145px) minmax(38px, 90px) minmax(129px, 283px);
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+﻿main {
+  & .table {
+    &__name {
+      margin: 16px 0 0;
+      @media screen and (min-width: 768px) {
+        margin: 80px 0 0;
+      }
+      &--transactionsPage {
+        display: grid;
+
+        @media screen and (min-width: 768px) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+    &--transactionsPage {
+      &__row {
+        grid-template-areas:
+          "_hash"
+          "_status"
+          "_age"
+          "_value" !important;
+        grid-template-columns: 1fr !important;
+        & div {
+          grid-template-areas: "_span _p";
+          grid-template-columns: 103px 1fr !important;
+          display: grid;
+          margin: 0 0 10px;
+          padding: 0;
+          & p {
+            margin: 0 0 0 24px;
+            grid-area: _p;
+
+            @media screen and (min-width: 768px) {
+              margin: 0;
+            }
+          }
+          & span {
+            grid-area: _span;
+
+            font-family: $supreme;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.015em;
+            text-align: left;
+            text-transform: uppercase;
+
+            color: $lightGrey5;
+
+            @media screen and (min-width: 768px) {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            grid-template-areas: "_p";
+            grid-template-columns: 1fr !important;
+          }
+        }
+        & .hash {
+          display: grid !important;
+          overflow: hidden !important;
+
+          & a {
+            margin: 0 !important;
+          }
+          @media screen and (min-width: 768px) {
+            display: flex !important;
+          }
+        }
+        & .status {
+          display: grid !important;
+          overflow: hidden !important;
+
+          @media screen and (min-width: 768px) {
+            display: flex !important;
+          }
+          & p {
+            margin: 0;
+          }
+        }
+        & .value {
+          overflow: auto;
+
+          &::-webkit-scrollbar {
+            width: 1px;
+          }
+          body::-webkit-scrollbar-thumb {
+            background: transparent;
+          }
+          & p {
+            display: flex;
+            align-items: center;
+            & a {
+              margin: 0 0 0 5px;
+            }
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          grid-template-areas: "_hash . _status _age _from _arrow _to . _value" !important;
+          grid-template-columns:
+            minmax(90px, 170px) minmax(16px, 63px) minmax(110px, 151px)
+            minmax(85px, 117px) minmax(73px, 165px) minmax(31px, 62px) minmax(
+              75px,
+              169px
+            )
+            minmax(19px, 49px) 149px !important;
+        }
+      }
+    }
+    &__link {
+      & a {
+        padding: 6px 19px;
+        cursor: pointer;
+
+        font-family: $supreme;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        color: $lightPink3;
+        border-radius: 4px;
+
+        &:hover {
+          color: $lightPink5;
+        }
+      }
+      &--transactionsPage {
+        display: flex !important;
+        overflow: auto;
+        margin: 20px 0 0 20px;
+
+        &::-webkit-scrollbar {
+          width: 1px;
+        }
+        body::-webkit-scrollbar-thumb {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

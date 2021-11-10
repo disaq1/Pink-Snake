@@ -1,0 +1,22 @@
+﻿.tabs_triggers__item--active {
+  color: $lightPink5 !important;
+  background: $lightPink1;
+}
+.tabs {
+  &_triggers {
+    &__item {
+      color: $lightGrey5 !important;
+      &--active {
+        color: $lightPink5 !important;
+      }
+    }
+  }
+  &_content {
+    &__item {
+      display: none !important;
+      &--active {
+        display: block !important;
+      }
+    }
+  }
+}

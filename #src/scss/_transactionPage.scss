@@ -1,0 +1,235 @@
+﻿.table--transaction {
+    display: grid;
+    grid-template-areas:
+    "_value _value"
+    "_hash _hash"
+    "_from _from"
+    "_to _to"
+    "_status _age";
+
+    &__row {
+        border-bottom: 2px solid $lightBG3;
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px 28px;
+        & span {
+            margin: 0 0 4px 0;
+
+            font-family: $supreme;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.015em;
+            text-align: left;
+            text-transform: uppercase;
+
+            color: $lightGrey5;
+
+        }
+        @media screen and (min-width:768px) {
+            padding: 20px 0;
+        }
+        & div {
+            & p,
+            & span,
+            & a {
+                font-family: $supreme;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                color: $lightGreyMain;
+            }
+            & span {
+                font-weight: 700;
+            }
+            & a {
+                text-decoration: none;
+                color: $lightBlue5;
+
+                // overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 1px;
+                }
+                body::-webkit-scrollbar-thumb {
+                    background: transparent;
+                }
+
+                &:hover {
+                    color: $lightBlue7;
+                }
+            }
+            & p {
+                margin: 0;
+            }
+        }
+    }
+
+    & .value {
+        grid-area: _value;
+
+        & div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            & span {
+                margin: 0 5px 0 0;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            padding: 20px 40px 20px 0;
+            border: none;
+        }
+    }
+    & .hash {
+        grid-area: _hash;
+
+        width: 100%;
+        & div {
+            display: grid;
+            grid-template-areas:
+            "_p _img";
+            grid-template-columns: 1fr 48px;
+            align-items: center;
+            & p {
+                grid-area: _p;
+                word-break: break-all;
+            }
+            & .download_link {
+                text-align: end;
+                grid-area: _img;
+            }
+
+            @media screen and (min-width:768px) {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            padding: 20px 0 20px 40px;
+        }
+    }
+    & .from {
+        grid-area: _from;
+
+        & div {
+            display: grid;
+            grid-template-areas:
+            "_a _img";
+            grid-template-columns: 1fr 48px;
+            & .link {
+                grid-area: _a;
+
+                white-space: nowrap; /* Запрещаем перенос строк */
+                overflow: hidden; /* Обрезаем все, что не помещается в область */
+                text-overflow: ellipsis; /* Добавляем многоточие */
+            }
+            & picture {
+                text-align: end;
+            }
+            & .download_link {
+                grid-area: _img;
+
+                text-align: right;
+            }
+
+            @media screen and (min-width:768px) {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            padding: 20px 0 20px 40px;
+        }
+    }
+    & .arrow {
+        grid-area: _arrow;
+
+        display: none;
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 0 28px;
+        }
+    }
+    & .to {
+        grid-area: _to;
+
+        & div {
+            display: grid;
+            grid-template-areas:
+            "_a _img";
+            grid-template-columns: 1fr 48px;
+            & .link {
+                grid-area: _a;
+
+                white-space: nowrap; /* Запрещаем перенос строк */
+                overflow: hidden; /* Обрезаем все, что не помещается в область */
+                text-overflow: ellipsis; /* Добавляем многоточие */
+            }
+            & picture {
+                text-align: end;
+            }
+            & .download_link {
+                grid-area: _img;
+
+                text-align: right;
+            }
+
+            @media screen and (min-width:768px) {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            padding: 20px 40px 20px 0;
+        }
+    }
+    & .status {
+        grid-area: _status;
+
+        @media screen and (min-width:768px) {
+            border: none;
+            padding: 20px 0 20px 40px;
+        }
+    }
+    & .age {
+        grid-area: _age;
+
+        & div {
+            & p {
+                & span {
+                    font-weight: 400;
+
+                    @media screen and (max-width:767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            border: none;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        grid-template-areas:
+        "_hash _hash _hash _hash _hash _hash _hash"
+        "_from _from _from _arrow _to _to _to"
+        "_status . _age _age . _value _value";
+        // grid-template-columns: minmax(69px, 116px) minmax(62px, 104px) minmax(111px, 180px) minmax(62px, 104px) minmax(65px, 110px) minmax(160px, 252px) minmax(175px, 274px);
+        grid-template-columns: 116px minmax(62px, 104px) minmax(111px, 180px) minmax(62px, 104px) minmax(65px, 110px) 113px minmax(175px, 274px);
+    }
+    @media screen and (min-width:1024px) {
+        grid-template-columns: 116px minmax(62px, 104px) minmax(111px, 180px) minmax(62px, 142px) minmax(65px, 110px) 113px minmax(175px, 274px);
+    }
+}

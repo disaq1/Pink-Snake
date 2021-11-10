@@ -1,0 +1,267 @@
+﻿.border_none {
+  border: none !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.table {
+    &__link--token {
+        margin: 0 0 0 32px !important;
+    }
+    &__name--token {
+        & p {
+            @media screen and (min-width:768px) {
+                margin: 0 32px 0 0 !important;
+                padding: 0;
+            }
+        }
+    }
+    &__header--token {
+        grid-template-areas:
+        "_hash . _age _from . _to . _value";
+
+        & .value {
+            grid-area: _value;
+        }
+        & .age {
+            grid-area: _age;
+        }
+        & .hash {
+            grid-area: _hash;
+        }
+        & .from {
+            grid-area: _from;
+        }
+        & .to {
+            grid-area: _to;
+        }
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: minmax(120px, 170px) minmax(17px, 62px) minmax(71px, 116px) minmax(111px, 166px) minmax(24px, 62px) minmax(111px, 170px) minmax(27px, 48px) minmax(167px, 266px);
+        }
+    }
+    &__row {
+        &--token {
+            grid-template-areas:
+            "_hash"
+            "_from"
+            "_to"
+            "_value"
+            "_age";
+
+            & p,
+            & div,
+            & a {
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    width: 1px;
+                }
+                body::-webkit-scrollbar-thumb {
+                    background: transparent;
+                }
+            }
+
+            & span {
+                grid-area: _span;
+
+                text-transform: uppercase;
+                @media screen and (min-width:768px) {
+                    display: none;
+                }
+            }
+            & a {
+                grid-area: _a;
+            }
+            & p {
+                margin: 0 !important;
+                padding: 0 !important;
+
+                @media screen and (max-width:767px) {
+                    display: grid !important;
+                    grid-template-areas:
+                    "_span _a" !important;
+                    grid-template-columns: 124px 1fr !important;
+                }
+            }
+
+            & .value {
+                grid-area: _value;
+
+                & span {
+                    color: $lightGrey5;
+                    font-weight: 400;
+                }
+                & a {
+                    font-weight: 700 !important;
+                    color: $lightGreyMain !important;
+                }
+            }
+            & .age {
+                grid-area: _age;
+
+                & a {
+                    text-decoration: none;
+                    color: $lightGrey5;
+                }
+            }
+            & .hash {
+                grid-area: _hash;
+
+                & a {
+                    margin: 0 !important;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
+            & .from {
+                grid-area: _from;
+
+                & span {
+                    color: $lightGrey5;
+                }
+                & a {
+                    text-decoration: none;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    @media screen and (max-width:767px) {
+                        color: $lightGreyMain;
+                    }
+                }
+            }
+            & .arrow {
+                grid-area: _arrow;
+                @media screen and (max-width:767px) {
+                    display: none;
+                }
+            }
+            & .to {
+                grid-area: _to;
+                & span {
+                    color: $lightGrey5;
+
+                }
+                & a {
+                    text-decoration: none;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    @media screen and (max-width:767px) {
+                        color: $lightGreyMain;
+                    }
+                }
+            }
+
+            @media screen and (min-width:768px) {
+            grid-template-areas:
+            "_hash . _age _from _arrow _to . _value";
+            grid-template-columns: minmax(120px, 170px) minmax(17px, 62px) minmax(71px, 116px) minmax(111px, 166px) minmax(24px, 62px) minmax(111px, 170px) minmax(27px, 48px) minmax(167px, 266px);
+        }
+        }
+            &_token {
+        display: grid;
+        grid-template-areas:
+        "_supply"
+        "_holders"
+        "_transfers"
+        "_owner";
+
+        height: fit-content !important;
+        @media screen and (min-width:768px) {
+            grid-template-areas:
+            "_supply _holders _transfers"
+            "_owner _owner _owner";
+        }
+        @media screen and (min-width:1024px) {
+            grid-template-areas:
+            "_supply _holders _transfers _owner";
+        }
+        & div {
+            margin: 0 0 18px 0;
+
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width:768px) {
+                margin: 0;
+            }
+            &:last-child {
+                margin: 0;
+            }
+            & span {
+                font-family: $supreme;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0.015em;
+                text-align: left;
+                text-transform: uppercase;
+
+                color: $lightGrey5;
+            }
+            & p {
+                margin: 0;
+                padding: 0;
+
+                font-family: $supreme;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -0.004em;
+                text-align: left;
+
+                color: $lightGreyMain;
+            }
+        }
+        &--supply {
+            grid-area: _supply;
+        }
+        &--holders {
+            grid-area: _holders;
+
+            & p span {
+                margin: 0 0 0 4px;
+
+                font-family: $supreme;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                color: $lightGreen;
+            }
+        }
+        &--transfers {
+            grid-area: _transfers;
+        }
+        &--owner {
+            grid-area: _owner;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            & p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+
+                & a {
+                    text-decoration: none;
+                    color: $lightBlue5;
+                    &:hover {
+                        color: $lightBlue7;
+                    }
+                }
+            }
+        }
+        }
+    }
+
+}
