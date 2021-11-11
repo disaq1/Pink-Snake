@@ -1,5 +1,8 @@
 .table--address {
     &__name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
         h3 {
             font-family: $supreme, sans-serif;
             font-size: 22px;
@@ -15,6 +18,24 @@
                 margin: 0 0 0 32px;
             }
         }
+      & p {
+        font-family: $supreme, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 22px 0 0;
+        color: $lightGrey5;
+
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+        & span {
+          color: $lightGreyMain;
+        }
+      }
     }
 
     &__row {
@@ -30,43 +51,6 @@
                 font-family: $supreme;
             }
         }
-        // & div {
-        //     & p,
-        //     & span,
-        //     & a {
-        //         font-family: $supreme;
-        //         font-size: 16px;
-        //         font-style: normal;
-        //         font-weight: 400;
-        //         line-height: 24px;
-        //         letter-spacing: 0em;
-        //         text-align: left;
-
-        //         color: $lightGreyMain;
-        //     }
-        //     & span {
-        //         font-weight: 700;
-        //     }
-        //     & a {
-        //         text-decoration: none;
-        //         color: $lightBlue5;
-
-        //         // overflow: auto;
-        //         &::-webkit-scrollbar {
-        //             width: 1px;
-        //         }
-        //         body::-webkit-scrollbar-thumb {
-        //             background: transparent;
-        //         }
-
-        //         &:hover {
-        //             color: $lightBlue7;
-        //         }
-        //     }
-        //     & p {
-        //         margin: 0;
-        //     }
-        // }
         &-title {
             display: flex;
             margin: 0 0 4px 0;
@@ -105,7 +89,7 @@
             width: 100%;
             &__body {
                 display: grid;
-                grid-template-areas: 
+                grid-template-areas:
                 "_p _img";
                 grid-template-columns: 1fr 48px;
                 align-items: center;
@@ -117,13 +101,13 @@
                     text-align: end;
                     grid-area: _img;
                 }
-    
+
                 @media screen and (min-width:768px) {
                     display: flex;
                 }
             }
         }
-        
+
         & .balance, .tokens {
             // grid-area: _balance;
             width: 100%;
@@ -213,10 +197,10 @@
             border: none;
         }
     }
-   
+
 
     @media screen and (min-width:768px) {
-        // grid-template-areas: 
+        // grid-template-areas:
         // "_hash _hash _hash _hash _hash _hash _hash _hash _hash"
         // "_balance"
         // "_status . _age _age . _value _value";

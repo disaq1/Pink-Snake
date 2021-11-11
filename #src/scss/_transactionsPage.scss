@@ -1,4 +1,9 @@
 ﻿main {
+  .dn768  {
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+  }
   & .table {
     &__name {
       margin: 16px 0 0;
@@ -110,6 +115,68 @@
               169px
             )
             minmax(19px, 49px) 149px !important;
+        }
+      }
+      &__address {
+        grid-template-areas:
+          "_value _value"
+          "_age _status"
+          "_from _from"
+          "_to _to"
+          "_hash _hash"
+          !important;
+        grid-template-columns: 45px 1fr !important;
+        & div {
+          grid-template-columns: 45px 1fr !important;
+          & p {
+            margin: 0 0 0 4px;
+          }
+        }
+
+        & .hash {
+
+        }
+        & .from {
+          display: grid !important;
+          margin: 0 0 10px;
+          & p a {
+            color: $lightGreyMain;
+          }
+        }
+        & .to {
+          display: grid !important;
+          & p a {
+            color: $lightGreyMain;
+          }
+        }
+        & .value {
+          grid-template-areas: "_p _p";
+          & p {
+            margin: 0;
+          }
+          & span {
+            display: none;
+          }
+        }
+        & .age {
+          grid-template-areas: "_p _p";
+          grid-template-columns: 145px 1fr !important;
+          span {
+            display: none !important;
+          }
+          & p {
+            margin: 0;
+          }
+        }
+        & .status {
+          grid-template-areas: "_p _p";
+          span {
+            display: none !important;
+          }
+          & p {
+            display: flex;
+            justify-content: flex-end;
+          }
         }
       }
     }

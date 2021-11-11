@@ -1290,6 +1290,78 @@ main .table--transactionsPage__row .value p a {
   margin: 0 0 0 5px;
 }
 
+main .table--transactionsPage__address {
+  grid-template-areas: "_value _value" "_age _status" "_from _from" "_to _to" "_hash _hash" !important;
+  grid-template-columns: 45px 1fr !important;
+}
+
+main .table--transactionsPage__address div {
+  grid-template-columns: 45px 1fr !important;
+}
+
+main .table--transactionsPage__address div p {
+  margin: 0 0 0 4px;
+}
+
+main .table--transactionsPage__address .from {
+  display: grid !important;
+  margin: 0 0 10px;
+}
+
+main .table--transactionsPage__address .from p a {
+  color: #202633;
+}
+
+main .table--transactionsPage__address .to {
+  display: grid !important;
+}
+
+main .table--transactionsPage__address .to p a {
+  color: #202633;
+}
+
+main .table--transactionsPage__address .value {
+  grid-template-areas: "_p _p";
+}
+
+main .table--transactionsPage__address .value p {
+  margin: 0;
+}
+
+main .table--transactionsPage__address .value span {
+  display: none;
+}
+
+main .table--transactionsPage__address .age {
+  grid-template-areas: "_p _p";
+  grid-template-columns: 145px 1fr !important;
+}
+
+main .table--transactionsPage__address .age span {
+  display: none !important;
+}
+
+main .table--transactionsPage__address .age p {
+  margin: 0;
+}
+
+main .table--transactionsPage__address .status {
+  grid-template-areas: "_p _p";
+}
+
+main .table--transactionsPage__address .status span {
+  display: none !important;
+}
+
+main .table--transactionsPage__address .status p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 main .table__link a {
   padding: 6px 19px;
   cursor: pointer;
@@ -1896,6 +1968,18 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   color: #1F4495;
 }
 
+.table--address__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .table--address__name h3 {
   font-family: "supreme", sans-serif, sans-serif;
   font-size: 22px;
@@ -1906,6 +1990,22 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   text-align: left;
   color: #202633;
   margin: 0 0 0 24px;
+}
+
+.table--address__name p {
+  font-family: "supreme", sans-serif, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 22px 0 0;
+  color: #828A99;
+}
+
+.table--address__name p span {
+  color: #202633;
 }
 
 .table--address__row {
@@ -2690,6 +2790,10 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
     margin: 0 0 0 32px;
   }
 
+  .table--address__name p {
+    display: none;
+  }
+
   .table--address__row {
     padding: 20px 40px 20px 40px !important;
   }
@@ -2902,6 +3006,10 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   footer section .footer__nav {
+    display: none;
+  }
+
+  main .dn768 {
     display: none;
   }
 
