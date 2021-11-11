@@ -868,7 +868,6 @@ main .table__row .status img {
 
 main .table__row .hash {
   grid-area: _hash;
-  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,6 +883,13 @@ main .table__row .hash body::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
+main .table__row .hash p {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
 main .table__row .hash a {
   margin: 0 0 0 4px;
   color: #3162C4;
@@ -891,7 +897,10 @@ main .table__row .hash a {
 }
 
 main .table__row .from {
-  overflow: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   grid-area: _from;
   margin: 0;
   color: #3162C4;
@@ -921,7 +930,10 @@ main .table__row .arrow {
 }
 
 main .table__row .to {
-  overflow: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   grid-area: _to;
   color: #3162C4;
   text-decoration: none;
@@ -949,7 +961,13 @@ main .table__row .transactions {
 
 main .table__row .owner {
   grid-area: _owner;
-  overflow: auto;
+}
+
+main .table__row .owner p {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 main .table__row .owner::-webkit-scrollbar {
@@ -984,6 +1002,13 @@ main .table__row .site p::-webkit-scrollbar {
 
 main .table__row .site p body::-webkit-scrollbar-thumb {
   background: transparent;
+}
+
+main .table__row div a {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 main .table__link {

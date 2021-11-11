@@ -304,8 +304,6 @@ main {
       & .hash {
         grid-area: _hash;
 
-        overflow: auto;
-
         display: flex;
 
         font-weight: 400;
@@ -322,6 +320,11 @@ main {
             display: none;
           }
         }
+        & p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         & a {
           margin: 0 0 0 4px;
           color: $lightBlue5;
@@ -332,7 +335,9 @@ main {
         }
       }
       & .from {
-        overflow: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         grid-area: _from;
 
@@ -363,7 +368,9 @@ main {
         }
       }
       & .to {
-        overflow: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         grid-area: _to;
 
@@ -402,7 +409,12 @@ main {
       }
       & .owner {
         grid-area: _owner;
-        overflow: auto;
+
+        & p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         &::-webkit-scrollbar {
           width: 1px;
         }
@@ -433,6 +445,11 @@ main {
         //}
       }
 
+      & div a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       @media screen and (min-width: 768px) {
         border: none;
         align-items: baseline;
