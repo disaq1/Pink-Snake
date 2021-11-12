@@ -99,7 +99,7 @@
                 <span>Value</span>
             </div>
 
-            <div class="table__row table__row--transaction">
+            <div class="table__row table__row--transaction" id="table__row_test">
                 <p class="value">
                     0.0045494736 <a href="#">PNKSNK</a>
                 </p>
@@ -110,19 +110,22 @@
                     <img src="img/green_dot.svg" alt="green_dot">
                     Completed
                 </p>
-                <div class="hash">
+                <div class="hash onHoverAddPrompt">
                     <span>HASH:</span>
-                    <a href="#">0x389a14a7af80d7aa3050fgr45060</a>
+                    <a href="#" >0x389a14a7af80d7aa3050fgr45060</a>
+                    <div class="prompt">0x389a14a7af80d7aa3050fgr45060</div>
                 </div>
-                <a href="address.html" class="from">
-                    0x1f8f16a29251fa399d89e
-                </a>
+                <div class="from onHoverAddPrompt">
+                    <a href="#" >0x389a14a7af80d7aa3050fgr45060</a>
+                    <div class="prompt">0x389a14a7af80d7aa3050fgr45060</div>
+                </div>
                 <div class="arrow">
                     <img src="img/arrow_FromTo.svg" alt="arrow_FromTo">
                 </div>
-                <a href="address.html" class="to">
-                    0x55a8e12fdf518acd0bc91
-                </a>
+                <div class="to onHoverAddPrompt">
+                    <a href="address.html">0x55a8e12fdf518acd0bc91</a>
+                    <div class="prompt">0x55a8e12fdf518acd0bc91</div>
+                </div>
             </div>
 
         </section>
@@ -237,6 +240,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Подключение img convertor-->
     <script src="js/imgConvertor.js"></script>
+
+    <script src="js/onHover.js"></script>
 </body>
 
 </html>

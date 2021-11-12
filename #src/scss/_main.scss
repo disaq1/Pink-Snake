@@ -309,12 +309,7 @@ main {
         font-weight: 400;
 
         color: $lightGrey5;
-        &::-webkit-scrollbar {
-          width: 1px;
-        }
-        body::-webkit-scrollbar-thumb {
-          background: transparent;
-        }
+
         & span {
           @media screen and (min-width: 768px) {
             display: none;
@@ -335,24 +330,19 @@ main {
         }
       }
       & .from {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
         grid-area: _from;
+        display: flex;
 
         margin: 0;
 
-        color: $lightBlue5;
-        text-decoration: none;
+        display: flex;
 
-        position: relative;
-        &::-webkit-scrollbar {
-          width: 1px;
+        & a {
+          margin: 0 0 0 4px;
+          color: $lightBlue5;
+          text-decoration: none;
         }
-        body::-webkit-scrollbar-thumb {
-          background: transparent;
-        }
+
         @media screen and (max-width: 767px) {
           display: none;
         }
@@ -368,21 +358,15 @@ main {
         }
       }
       & .to {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
         grid-area: _to;
+        display: flex;
 
-        color: $lightBlue5;
-        text-decoration: none;
+        & a {
+          margin: 0 0 0 4px;
+          color: $lightBlue5;
+          text-decoration: none;
+        }
 
-        &::-webkit-scrollbar {
-          width: 1px;
-        }
-        body::-webkit-scrollbar-thumb {
-          background: transparent;
-        }
         @media screen and (max-width: 767px) {
           display: none;
         }
@@ -505,5 +489,41 @@ main {
     @media screen and (min-width: 1024px) {
       margin: 20px 32px 123px;
     }
+  }
+}
+.prompt {
+  display: none;
+}
+.qwe {
+  position: relative;
+}
+.onHoverAddPrompt:hover {
+  border-radius: 5px;
+  background: $lightBG3;
+}
+.qwe .prompt{
+  display: flex;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  padding: 9px 11px;
+  color: $lightGrey7;
+  background: $trueWhite;
+  box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
+  border-radius: 2px;
+  font-family: "supreme",sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  line-height: 0;
+  letter-spacing: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top: 8px solid white;
+    box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
   }
 }

@@ -875,14 +875,6 @@ main .table__row .hash {
   color: #828A99;
 }
 
-main .table__row .hash::-webkit-scrollbar {
-  width: 1px;
-}
-
-main .table__row .hash body::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-
 main .table__row .hash p {
   white-space: nowrap;
   overflow: hidden;
@@ -897,23 +889,18 @@ main .table__row .hash a {
 }
 
 main .table__row .from {
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
   grid-area: _from;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
+  display: flex;
+}
+
+main .table__row .from a {
+  margin: 0 0 0 4px;
   color: #3162C4;
   text-decoration: none;
-  position: relative;
-}
-
-main .table__row .from::-webkit-scrollbar {
-  width: 1px;
-}
-
-main .table__row .from body::-webkit-scrollbar-thumb {
-  background: transparent;
 }
 
 main .table__row .arrow {
@@ -930,21 +917,16 @@ main .table__row .arrow {
 }
 
 main .table__row .to {
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
   grid-area: _to;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .table__row .to a {
+  margin: 0 0 0 4px;
   color: #3162C4;
   text-decoration: none;
-}
-
-main .table__row .to::-webkit-scrollbar {
-  width: 1px;
-}
-
-main .table__row .to body::-webkit-scrollbar-thumb {
-  background: transparent;
 }
 
 main .table__row .name {
@@ -1052,6 +1034,53 @@ main .table__link a:hover {
 
 main .table__link--hidden {
   display: block !important;
+}
+
+.prompt {
+  display: none;
+}
+
+.qwe {
+  position: relative;
+}
+
+.onHoverAddPrompt:hover {
+  border-radius: 5px;
+  background: #EDF3FF;
+}
+
+.qwe .prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  padding: 9px 11px;
+  color: #505766;
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
+          box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
+  border-radius: 2px;
+  font-family: "supreme",sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.qwe .prompt::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top: 8px solid white;
+  -webkit-box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
+          box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
 }
 
 .img-svg-blue path {
