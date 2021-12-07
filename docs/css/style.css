@@ -1724,6 +1724,11 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: 1fr minmax(147px, 1fr);
   grid-template-areas: "_span _p";
+  margin: 0 0 10px;
+}
+
+.table__row--tokens div:last-child {
+  margin: 0;
 }
 
 .table__row--tokens div span {
@@ -2374,6 +2379,10 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   color: #B9BEC7;
 }
 
+.breadCrumbs.addressPage {
+  margin: 32px 0 -60px 32px;
+}
+
 .breadCrumbs a {
   text-decoration: none;
   display: -webkit-box;
@@ -2402,7 +2411,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   width: 24px;
   height: 19px !important;
   color: #E3358E !important;
-  font-weight: 700;
+  font-weight: 700 !important;
   background-color: #FEE7F3;
 }
 
@@ -2775,6 +2784,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   .table__row--tokens div {
+    margin: 0;
     grid-template-areas: "_p";
     grid-template-columns: 1fr;
   }

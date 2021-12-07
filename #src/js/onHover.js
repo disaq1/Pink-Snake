@@ -11,11 +11,9 @@ hoverElem.forEach((item) => {
     item.addEventListener('mouseenter', function (e) {
         let targetItem = e.target;
         targetItem.classList.add('qwe')
-        console.log(targetItem)
     });
     item.addEventListener('mouseleave', function (e) {
         let targetItem = e.target;
         targetItem.classList.remove('qwe')
-        console.log(targetItem)
     });
 });

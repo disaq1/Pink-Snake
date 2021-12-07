@@ -36,9 +36,14 @@
         display: grid;
         grid-template-columns: 1fr minmax(147px, 1fr);
         grid-template-areas: "_span _p";
+        margin: 0 0 10px;
         @media screen and (min-width: 768px) {
+          margin: 0;
           grid-template-areas: "_p";
           grid-template-columns: 1fr;
+        }
+        &:last-child {
+          margin: 0;
         }
         & span {
           grid-area: _span;
