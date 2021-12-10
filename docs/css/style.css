@@ -1054,7 +1054,7 @@ main .table__link--hidden {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: -18px;
+  top: -26px;
   left: 0;
   padding: 9px 11px;
   color: #505766;
