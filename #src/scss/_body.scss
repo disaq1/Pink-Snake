@@ -11,6 +11,7 @@ body._lock {
   display: flex;
   align-items: center;
   color: $lightGrey3;
+  cursor: pointer;
   &:hover .img-svg path {
     stroke: $lightPink5;
   }

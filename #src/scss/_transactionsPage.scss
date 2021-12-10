@@ -4,6 +4,12 @@
       display: none;
     }
   }
+  .dn_after_767 {
+    display: block;
+    @media screen and (min-width:768px) {
+      display: none;
+    }
+  }
   & .table {
     &__name {
       margin: 16px 0 0;

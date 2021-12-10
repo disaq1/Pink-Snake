@@ -169,6 +169,7 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   color: #B9BEC7;
+  cursor: pointer;
 }
 
 .img-svg-link:hover .img-svg path {
@@ -586,6 +587,18 @@ header .footer {
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-72 {
+  margin-bottom: 72px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
 }
 
 main {
@@ -1063,7 +1076,7 @@ main .table__link--hidden {
           box-shadow: 0 4px 16px rgba(15, 42, 116, 0.14);
   border-radius: 2px;
   font-family: "supreme",sans-serif;
-  font-size: 8px;
+  font-size: 14px;
   font-style: normal;
   line-height: 0;
   letter-spacing: 0;
@@ -1235,6 +1248,10 @@ footer section .toTop p {
   text-align: right;
   text-transform: uppercase;
   color: #FA7DBD;
+}
+
+main .dn_after_767 {
+  display: block;
 }
 
 main .table__name {
@@ -1771,6 +1788,18 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   margin-top: 0 !important;
 }
 
+.smallName {
+  font-family: "supreme", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  color: #828A99;
+  padding: 0 28px;
+}
+
 .table__link--token {
   margin: 0 0 0 32px !important;
 }
@@ -2192,6 +2221,11 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.table--address__row .balance__body-all button:hover,
+.table--address__row .tokens__body-all button:hover {
+  color: #E3358E;
+}
+
 .table--address__row .balance__body-all button img,
 .table--address__row .tokens__body-all button img {
   display: -webkit-box;
@@ -2380,7 +2414,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
 }
 
 .breadCrumbs.addressPage {
-  margin: 32px 0 -60px 32px;
+  margin: 4px 0 -60px 32px;
 }
 
 .breadCrumbs a {
@@ -2409,7 +2443,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
 .hexagon {
   position: relative;
   width: 24px;
-  height: 19px !important;
+  height: 14px !important;
   color: #E3358E !important;
   font-weight: 700 !important;
   background-color: #FEE7F3;
@@ -2529,7 +2563,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   header .main {
-    padding: 60px 32px;
+    padding: 60px 32px 0;
     display: grid;
     grid-template-areas: "_h1 _d1" "_h1 _d2";
     -webkit-box-align: start;
@@ -2647,6 +2681,10 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   footer section .toTop {
+    display: none;
+  }
+
+  main .dn_after_767 {
     display: none;
   }
 
@@ -2947,7 +2985,7 @@ main .table__link--transactionsPage body::-webkit-scrollbar-thumb {
   }
 
   header .main {
-    padding: 60px 32px 44px;
+    padding: 60px 32px 0;
     display: grid;
     grid-template-areas: "_h1 _d1 _d2";
     grid-gap: 0;

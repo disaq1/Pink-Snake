@@ -4,6 +4,17 @@
 .mt-0 {
   margin-top: 0 !important;
 }
+.smallName {
+  font-family: $supreme;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  color: $lightGrey5;
+  padding: 0 28px;
+}
 .table {
     &__link--token {
         margin: 0 0 0 32px !important;
