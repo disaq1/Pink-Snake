@@ -190,11 +190,13 @@ header {
         @media screen and (min-width:1024px) {
             grid-template-areas:
                 "_logo _nav _search";
-            grid-template-columns: 152px 315px 348px;
+            //grid-template-columns: 152px 315px 348px;
+            grid-template-columns: 152px 210px 348px;
         }
 
         @media screen and (min-width:1204px) {
-            grid-template-columns: 152px 530px 348px;
+            //grid-template-columns: 152px 530px 348px;
+            grid-template-columns: 152px 400px 348px;
             width: 1204px;
         }
     }
